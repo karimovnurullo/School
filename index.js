@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var main_1 = require("./src/main");
+var student_1 = require("./src/model/student/student");
+var group_1 = require("./src/model/group/group");
+var main = new main_1.Main();
+var group1 = new group_1.Group("5b");
+var student1 = new student_1.Student("Nurullo", "Karimov", 20, 998905640618);
+var student2 = new student_1.Student("Amirxon", "Abralov", 15, 998905640353);
+var student3 = new student_1.Student("Madina", "Asrorxojayeva", 18, 998940454033);
+// main.addStudents(student1, student2, student3);
+main.groupService.addGroup(group1);
+main.groupService.addStudent("5b", student1, student2, student3);
+console.log(main.groupService.getAllGroups());
+// console.log(main.getStudentsList());
+// console.log("Get by id ",main.getStudentById(student3.getID()));
+// console.log("Get by phone number: ",main.getStudentByPhoneNumber(student3.phoneNumber));
+undefined;
